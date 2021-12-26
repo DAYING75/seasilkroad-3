@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>庆安会馆</title>
+		<style>			
+			/* 公用样式 */
+			html,body{
+			    width:100%;
+				height:100%;
+				margin:0px;
+				overflow-x: scroll;
+				overflow-y: hidden;
+			}
+			/*背景图层*/
+			.banner{
+				display: flex;
+				height:100vh;
+				position: relative;
+				perspective:950;
+				-webkit-perspective:950; /* Safari and Chrome */
+			}
+			.bg{
+				position: absolute;
+				display: flex;
+				justify-content: center;
+				align-content: center;
+			}
+			.mazu{
+				position: absolute;
+				transition: all 10s;
+			}
+			.mazu:hover{
+				transform-origin: 0 0 ;
+				transform: rotateY(-10deg);
+				-webkit-transform: rotateY(-10deg); /* Safari and Chrome */
+			}
+			
+			.men{
+				position: absolute;
+				left: 1220px;
+				transition: all 4s ease-in-out;
+			}
+			.men:hover{
+				transform-origin: 0.5 0.5 ;
+				transform: scale(1.05);
+			}
+			
+			/*文字*/
+			.fo{
+				position: absolute;
+				left: 880px;
+				top: -15px;
+				cursor: pointer;
+			}
+			.xitai{
+				position: absolute;
+				top: 100px;
+				left: 1720px;
+				cursor: pointer;
+			}
+			.huiguan{
+				position: absolute;
+				top: 90px;
+				left: 2190px;
+				cursor: pointer;
+			}
+			.fo img,.xitai img , .huiguan img{
+				visibility: hidden;
+			}
+			.fo:hover img,.xitai:hover img,.huiguan:hover img{
+				visibility: visible;
+			}
+			.txt{
+				position: absolute;
+				display: none;
+			}
+			.notice{
+				width: 510px;
+				height: 60px;
+			    animation:notice 2s ease infinite;
+				margin: 20px;
+			}
+			
+			@keyframes notice {
+			        0% {opacity:0.2;}
+			        100%{opacity:1;}
+			 }
+			::-webkit-scrollbar {
+			            height: 8px;
+			        }
+			::-webkit-scrollbar-thumb {
+			            border-radius:6px;
+						background-color: lightgoldenrodyellow;
+			        }
+			::-webkit-scrollbar-track {
+			            //background-color: aliceblue;
+			        }			
+		</style>
+	</head>
+	<body>
+		<div class = "banner">
+			<div class = "bg"><img height="740px" src = "res/img/bg.png" /></div>
+			<div class = "mazu"><img height="740px" src = "res/img/mazu1.png" /></div>
+			<div class = "men"><img height="740px" src = "res/img/men.png" /></div>
+			
+			<div class="txt" style="top: 80px;"><img height="740px" src="res/img/txt1.png"></div>
+			<div class="txt"><img height="740px" src="res/img/txt2.png"></div>
+			<div class="txt" style="top: -350px;"><img height="740px" src="res/img/txt3.png"></div>
+			<div class="fo"><img height="520px" src="res/img/fo.png" onclick="lighttxt1()"/></div>
+			<div class="xitai"><img height="620px" src="res/img/taixi.png" onclick="lighttxt2()"/></div>
+			<div class="huiguan"><img height="650px" src="./res/img/huiguan.png" onclick="lighttxt3()"/></div>
+			<div class = "notice"><img height="60px" src = "res/img/not.png"/></div>
+		</div>	
+		<script type="text/javascript">
+		var i = 0;
+			function lighttxt1(){
+				if(i==0){
+					document.getElementsByClassName("txt")[0].style.display = "block";
+				}
+				if(i==1){
+					document.getElementsByClassName("txt")[0].style.display = "none";
+				}
+				if(i==0){
+					i=1;
+				}
+				else{
+					i=0;
+				}
+				
+			}
+			var j = 0;
+				function lighttxt2(){
+					if(j==0){
+						document.getElementsByClassName("txt")[1].style.display = "block";
+					}
+					if(j==1){
+						document.getElementsByClassName("txt")[1].style.display = "none";
+					}
+					if(j==0){
+						j=1;
+					}
+					else{
+						j=0;
+					}
+					
+				}
+				var k = 0;
+					function lighttxt3(){
+						if(k==0){
+							document.getElementsByClassName("txt")[2].style.display = "block";
+						}
+						if(k==1){
+							document.getElementsByClassName("txt")[2].style.display = "none";
+						}
+						if(k==0){
+							k=1;
+						}
+						else{
+							k=0;
+						}
+						
+					}
+		</script>
+	</body>
+</html>

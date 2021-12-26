@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>千帆聚明州</title>
+		<meta charset="utf-8" />
+		<style type="text/css">
+			/* 公用样式 */
+			
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			.banner {
+				display: flex;
+				height: 100vh;
+				position: relative;
+			}
+			
+			.layer {
+				position: absolute;
+				display: flex;
+				justify-contenr: center;
+				algin-items: center;
+				overflow-y: hidden;
+			}
+			
+			.bg2 {
+				height: 100%;
+				width: 100%;
+				top: 50%;
+				left: 50%;
+			}
+			
+			.bg3 {
+				height: 150%;
+				width: 150%;
+				margin-left: 750px;
+				margin-top: 150px;
+				top: 50%;
+				left: 50%;
+			}
+			.bgz {
+				height: 100%;
+				width: 100%;
+				top: 50%;
+				left: 50%;
+				transition: all 0.6s;
+				
+			}
+			
+			.tj1 {
+				margin-left: 250px;
+				margin-top: 270px;
+				cursor: pointer;
+			}
+			
+			.tj2 {
+				margin-left: 580px;
+				margin-top: 350px;
+				cursor: pointer;
+			}
+			
+			.tj3 {
+				margin-left: 750px;
+				margin-top: 640px;
+				cursor: pointer;
+			}
+			
+			.tj3t {
+				position: absolute;
+				margin-left: 750px;
+				margin-top: 640px;
+			}
+			
+			.tj2t {
+				position: absolute;
+				margin-left: 580px;
+				margin-top: 350px;
+			}
+			
+			.tj1t {
+				position: absolute;
+				margin-left: 250px;
+				margin-top: 270px;
+			}
+			
+			.share {
+				position: absolute;
+				z-index: 100;
+				width: 84.3%;
+				height: 94%;
+				display: block;
+				opacity:1;
+				transition: all 0.6s ease all 1s;
+			}
+			
+			.share:hover {
+				transform: scale(0.8);
+				opacity:0.6;
+			}
+		</style>
+
+		<script>
+			window.onload = function() {
+				var x = document.getElementsByClassName("share")[0];
+				setTimeout(function() { //定时器 
+					x.style.display = "none"; //将图片的display属性设置为none
+				}, 3000); //设置三千毫秒即3秒
+			};
+		</script>
+	</head>
+
+	<body>
+
+		<div class="banner">
+
+			<div class="layer"><img class="bg2" src="res/渐变消失1.png" /></div>
+			<div class="layer"><img class="bg2" src="res/渐变消失2.png" /></div>
+			<div class="layer"><img class="bg3" src="res/渐变消失3.png" /></div>
+			<div class="layer"><img class="bgz" src="res/新建组.png" /></div>
+			<div class="layer"><img class="tj3" src="res/贸易.png" /></div>
+			<div class="layer"><img class="tj2" src="res/文化.png" /></div>
+			<div class="layer"><img class="tj1" src="res/地理优势.png" /></div>
+			<div ><img class="share" src="res/share.gif" /></div>
+			<div>
+
+				<a href="index-dl.html"><img class=tj1t src="res/地理优势.png" /></a>
+			</div>
+			<div>
+				<a href="index-myj.html"><img class=tj3t src="res/贸易.png" /></a>
+			</div>
+			<div>
+				<a href="index-hall.html"><img class=tj2t src="res/文化.png" /></a>
+			</div>
+
+	</body>
+
+</html>

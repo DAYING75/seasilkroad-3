@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贸易长街</title>
+    <style>
+		/* 公用样式 */
+		html,body{
+		    width:100%;
+			height:100%;
+			margin:0px;
+			overflow-x: scroll;
+			overflow-y: hidden;
+		}
+		/*背景图层*/
+		.banner{
+			display: flex;
+				height:100vh;
+			position: relative;
+		}
+		.layer{
+			position: absolute;
+			display: flex;
+				overflow-y: hidden;
+				height: 740px;
+		}
+		
+		/*建筑*/
+		.riben{
+				   position: absolute;
+				   top: 31px;
+				   left: 125px;
+		}
+		.gaoli{
+				   position: absolute;
+				   top: 241px;
+				   left: 1227px;
+		}
+				.dongnanya{
+					position: absolute;
+					top: 18px;
+					left: 2466px;
+				}
+				/*鼠标经过显示发光样式*/
+				.riben img, .gaoli img, .dongnanya img{
+				   visibility: hidden;
+				   transition: all 1s ease-in-out;
+		}
+		.riben:hover img, .gaoli:hover img, .dongnanya:hover img{
+				   visibility: visible;
+				   transform: scale(1.02);
+		}
+		.notice{
+			width: 510px;
+			height: 60px;
+		    animation: notice 2s ease infinite;
+			margin-top: 0px;
+			margin-left: 60px;
+		}			
+		@keyframes notice {
+		        0% {opacity:0.2;}
+		        100%{opacity:1;}
+		 }
+		
+		::-webkit-scrollbar {
+		            height: 8px;
+		        }
+		::-webkit-scrollbar-thumb {
+		            border-radius:6px;
+					background-color: lightgoldenrodyellow;
+		        }
+    </style>
+	
+</head>
+<body>
+    <div class = "banner">
+		<div class = "layer"><img class ="bg" src = "./res/bg.png" /></div>
+		
+		<div class ="riben">
+			<a href="index-riben.html"><img width="1260px" src ="res/lightriben.png"/></a>
+		</div>
+		<div class ="gaoli">
+			<a href="index-gaoli.html"><img width="1385px" src ="res/lightgaoli.png" /></a>
+		</div>
+		<div class ="dongnanya">
+			<a href="index-dongnanya.html"><img width="840px" src ="res/lightdny.png" /></a>
+		</div>
+		<div class = "notice"><img height="60px" src = "res/img/not.png"/></div>
+	</div>
+</body>
+</html>
